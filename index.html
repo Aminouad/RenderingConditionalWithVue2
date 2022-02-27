@@ -23,8 +23,21 @@
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <!-- <ul v-else-if="goals.length > 0"> -->
       <ul v-else>
-        <li>Goal</li>
+        <!-- <li v-for="goal in goals">{{ goal }}</li> -->
+        <!-- //loop throw array -->
+        <li v-for="(goal,index) in goals">{{ index }} - {{ goal }}</li>  
+
       </ul>
+      <!-- <ul>
+        <li v-for="num in 10">{{num}}</li>
+
+      </ul> -->
+      <!-- <ul>
+        //loop throw object
+        <li v-for="value in {name:'Amine',age:25}">{{ value }}</li>  
+        <li v-for="(value,key,index) in {name:'Amine',age:25}">{{ key }} => {{value}} => {{index}}</li>  
+
+      </ul> -->
      <!--  <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p> // the main difference between v-show and v-if is that v-if remove integrally the element  from the DOM v-show change the display to none with css
       <ul v-show="goals.length > 0">
         <li>Goal</li>
